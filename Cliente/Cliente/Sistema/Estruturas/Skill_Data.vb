@@ -2,7 +2,7 @@
 Imports SFML.System
 
 Module modSkillData
-    Public Skill As HashSet(Of SkillData) = New HashSet(Of SkillData)
+    Public Skill As List(Of SkillData) = New List(Of SkillData)
     Public Const MAX_EFEITOS As Byte = 10
 End Module
 

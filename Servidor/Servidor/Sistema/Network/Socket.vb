@@ -63,7 +63,7 @@ Module Socket
             client.NoDelay = False
             ServerSocket.BeginAcceptTcpClient(AddressOf OnClientConnect, Nothing)
             For i = 1 To Options.MAX_PLAYERS
-                If Clients(i).index = 0 Then
+                If Clients(i).Socket Is Nothing Then
                     Clients(i).Socket = client
                     Clients(i).index = i
                     Clients(i).IP = DirectCast(client.Client.RemoteEndPoint, IPEndPoint).Address.ToString
@@ -117,8 +117,10 @@ Module Socket
         If Index > 0 Then
             LeftGame(Index)
             If Not Clients(Index).Socket Is Nothing Then Clients(Index).Socket.Close()
+            Clients(Index).Socket = Nothing
             Conta(Index).Clear()
             Player(Index).Clear()
+            isUpdateListView = True
         End If
     End Sub
 

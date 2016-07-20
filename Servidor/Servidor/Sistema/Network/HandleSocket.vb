@@ -64,7 +64,7 @@ Module HandleSocket
         Dim b() As Byte = Decompress(Buffer.ReadBytes(len - 1))
         Buffer.Dispose()
 
-        Buffer = New ByteBuffer
+        Buffer = New ByteBuffer(b)
         Dim id As Integer = Buffer.ReadInteger
 
         With Skill(id)

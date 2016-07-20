@@ -45,7 +45,6 @@
             TempPlayer(Index).InGame = False
             Player(Index).Save()
             Player(Index).Clear()
-            isUpdateListView = True
         End If
     End Sub
 

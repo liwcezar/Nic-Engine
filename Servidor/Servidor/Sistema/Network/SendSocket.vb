@@ -120,6 +120,7 @@
         Buffer.WriteBytes(b)
         SendDataTo(Index, Buffer.ToArray)
         Buffer.Dispose()
+
     End Sub
 
     Public Sub SendPlayerVitalHP(ByVal Index As Integer)
