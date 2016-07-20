@@ -48,7 +48,7 @@ Public Class SkillData
 
     Public Sub Load()
         Dim fileName As String = Application.StartupPath & "/Data/Skill/" & ID & ".bin"
-        If IO.File.Exists(fileName) Then Save()
+        If Not IO.File.Exists(fileName) Then Save()
         Dim s As New IO.FileStream(fileName, IO.FileMode.OpenOrCreate)
 
         Using r As New IO.BinaryReader(s)
@@ -68,7 +68,9 @@ Public Class SkillData
                 Effect(i).Range = r.ReadInt16
                 Effect(i).Roubo = r.ReadByte
             Next
+            r.Close()
         End Using
+        s.Close()
     End Sub
 
     Public Sub Save()
@@ -92,7 +94,9 @@ Public Class SkillData
                 w.Write(Effect(i).Range)
                 w.Write(Effect(i).Roubo)
             Next
+            w.Close()
         End Using
+        s.Close()
     End Sub
 
     Public ReadOnly Property ID As Integer

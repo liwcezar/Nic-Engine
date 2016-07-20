@@ -22,6 +22,82 @@ Servidor
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="F:Servidor.SkillData.Nome">
+ <summary>
+ Nome da Skill
+ </summary>
+</member>
+<member name="F:Servidor.SkillData.CustoMP">
+ <summary>
+ Quantia de MP a se gasto
+ </summary>
+</member>
+<member name="F:Servidor.SkillData.CoolDown">
+ <summary>
+ Tempo de re-uso da skill
+ </summary>
+</member>
+<member name="F:Servidor.SkillData.MaxEffect">
+ <summary>
+ Limite de Efeitos
+ </summary>
+</member>
+<member name="F:Servidor.SkillData.Icon">
+ <summary>
+ Gráfico do Icone
+ </summary>
+</member>
+<member name="F:Servidor.SkillData.EffectData.Tipo">
+ <summary>
+ Tipo do Efeito
+ </summary>
+</member>
+<member name="F:Servidor.SkillData.EffectData.CastAnimation">
+ <summary>
+ Animação ao usar a Skill no personagem
+ </summary>
+</member>
+<member name="P:Servidor.SkillData.EffectData.CastData">
+ <summary>
+ Dados da animação de uso da skill
+ </summary>
+</member>
+<member name="F:Servidor.SkillData.EffectData.CastTimer">
+ <summary>
+ Tempo que leva para usar a Skill
+ </summary>
+</member>
+<member name="F:Servidor.SkillData.EffectData.Anim">
+ <summary>
+ Animação do Efeito
+ </summary>
+</member>
+<member name="P:Servidor.SkillData.EffectData.AnimData">
+ <summary>
+ Dados da animação do Efeito
+ </summary>
+</member>
+<member name="F:Servidor.SkillData.EffectData.Vital">
+ <summary>
+ Valor de Cura ou Dano do efeito
+ </summary>
+</member>
+<member name="F:Servidor.SkillData.EffectData.isAOE">
+ <summary>
+ Determina se o efeito é de Área
+ </summary>
+</member>
+<member name="F:Servidor.SkillData.EffectData.Range">
+ <summary>
+ Valor de Área ou Distância do alvo, máximo!
+ </summary>
+</member>
+<member name="F:Servidor.SkillData.EffectData.Roubo">
+ <summary>
+ <para>Valor de roubo de Vida ou Mana.</para> 
+ <para>Valores: 0 - 100%</para>
+ </summary>
+</member>
 <member name="M:Servidor.General.Modulo(System.Int32,System.Int32)">
  <summary>
  Calcula o Módulo de um Vetor (X,Y)
